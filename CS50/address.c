@@ -1,2 +1,5 @@
 #include<stdio.h>
-int n = 50;
+int main(void)
+{
+    int n = 50;
+}
