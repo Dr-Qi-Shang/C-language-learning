@@ -8,7 +8,8 @@ int main(void)
     printf("s:");
     scanf("%99s",s);
     char *t=malloc(strlen(s)+1);
-    strcpy(t,s);
+    strcpy(t,s);/*char *t=s；是浅拷贝，char *t=malloc(strlen(s)+1);strcpy(t,s);是深拷贝。*/
+
     /*如果我用for(i=0,n=strlen(s);i<=n;i++)来代替strcpy(t,s)，复制完后，t的最后会有字符串结束符 \0。*/
     /*for(i=0,n=strlen(s);i<=n;i++)如果改成i<n，不复制字符串结束符 \0,结果是 t 不是合法 C 字符串。
     后果：
