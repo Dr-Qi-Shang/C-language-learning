@@ -1,104 +1,116 @@
+# C语言学习仓库
 
+这是一个以小程序练习为核心的 C 语言学习仓库，内容主要来自 CS50 风格示例，并补充了少量 LeetCode 题解代码。
 
-# C语言学习
+## 仓库内容
 
-这是一个面向初学者的C语言学习项目，参考CS50课程风格设计，包含了从基础入门到高级主题的多种示例程序和练习代码。通过系统化的练习，帮助学习者掌握C语言的核心概念和编程技巧。项目还包含了一些LeetCode算法题的解题实现，供学习者提升算法能力参考。
+- `CS50/`：覆盖输入输出、循环、函数、字符串、结构体、递归等基础主题
+- `LeetCode/`：算法题函数实现（136 与 704）
+- `README.md` 与 `README.en.md`：中英文说明文档
 
-## 项目特色
+## 目录结构
 
-- **循序渐进**：从基础输出到复杂数据结构的完整学习路径
-- **CS50风格**：经典的教学示例和练习项目
-- **实践导向**：每个知识点都有对应的代码演示
-- **算法实战**：包含LeetCode题目解答供参考学习
-
-## 项目结构
-
-### 基础入门
-
-| 文件 | 说明 |
-|------|------|
-| `hi.c` | Hello World 基础输出示例 |
-| `numbers.c` | 整数类型与运算演示 |
-| `float.c` | 浮点数类型使用 |
-| `string.c` | 字符串处理基础 |
-| `block1.c` / `block2.c` | 代码块与作用域演示 |
-
-### 控制流
-
-| 文件 | 说明 |
-|------|------|
-| `for.c` | for 循环语句用法 |
-| `switch1.c` | switch 分支结构 |
-| `mario2.c` | 马里奥风格输出练习 |
-
-### 函数
-
-| 文件 | 说明 |
-|------|------|
-| `cough0.c` | 无参函数定义与调用 |
-| `cough1.c` | 函数基础定义 |
-| `cough3.c` | 带参数的函数实现 |
-
-### 命令行参数
-
-| 文件 | 说明 |
-|------|------|
-| `argv.c` | 命令行参数处理 |
-| `exit.c` | 程序退出状态返回 |
-| `agree.c` | 用户交互示例 |
-
-### 高级主题
-
-| 文件 | 说明 |
-|------|------|
-| `scores.c` | 数组、指针与函数返回值 |
-| `phonebook.c` | 结构体实战应用 |
-| `overflow.c` | 整数溢出演示 |
-| `uppercase.c` | 字符大小写转换 |
-| `names.c` | 字符串处理示例 |
-| `comparc.c` | 比较操作演示 |
-| `copy.c` | 内存拷贝操作 |
-| `address.c` | 内存地址操作 |
-
-### 递归与迭代
-
-| 文件 | 说明 |
-|------|------|
-| `recursion.c` | 递归函数练习 |
-| `iteration.c` | 迭代循环练习 |
-
-### LeetCode 算法题
-
-| 文件 | 说明 |
-|------|------|
-| `136.c` | 只出现一次的数字 |
-| `704.c` | 二分查找 |
-
-## 编译运行
-
-```bash
-# 进入项目目录
-cd CS50
-
-# 编译单个源文件
-gcc -o output/names names.c
-
-# 运行生成的可执行文件
-./output/names
+```text
+C-language-learning/
+├─ CS50/
+│  ├─ address.c
+│  ├─ agree.c
+│  ├─ argv.c
+│  ├─ compare.c
+│  ├─ copy.c
+│  ├─ cough0.c
+│  ├─ cough1.c
+│  ├─ cough3.c
+│  ├─ exit.c
+│  ├─ float.c
+│  ├─ for.c
+│  ├─ hi.c
+│  ├─ iteration(迭代).c
+│  ├─ mario2.c
+│  ├─ names.c
+│  ├─ numbers.c
+│  ├─ overflow.c
+│  ├─ phonebook.c
+│  ├─ recursion(递归).c
+│  ├─ scores.c
+│  ├─ string.c
+│  ├─ uppercase.c
+│  └─ output/
+├─ LeetCode/
+│  ├─ 136.c
+│  └─ 704.c
+├─ README.md
+├─ README.en.md
+└─ LICENSE
 ```
 
-## 环境依赖
+## CS50 文件说明
 
-- **编译器**：GCC 或其他C语言编译器
-- **操作系统**：Linux、macOS、Windows（需配置GCC环境）
+| 文件 | 主题 |
+|------|------|
+| `address.c` | 指针偏移访问字符串字符 |
+| `agree.c` | 单字符输入分支判断（`y`/`n`） |
+| `argv.c` | 命令行参数读取与使用 |
+| `compare.c` | `malloc` 动态分配与字符串输入 |
+| `copy.c` | `malloc` + `strcpy` 进行深拷贝 |
+| `cough0.c` | 使用 `printf` 直接重复输出 |
+| `cough1.c` | 无参函数声明、定义与调用 |
+| `cough3.c` | 带参函数与循环输出 |
+| `exit.c` | 参数校验与退出状态码返回 |
+| `float.c` | 浮点输入、除法与高精度输出 |
+| `for.c` | `for` 循环基础示例 |
+| `hi.c` | 字符与 ASCII 整数值输出 |
+| `iteration(迭代).c` | 用迭代方式绘制三角形 |
+| `mario2.c` | `do-while` 输入校验与输出 |
+| `names.c` | 字符串数组线性查找 |
+| `numbers.c` | 整数数组线性查找 |
+| `overflow.c` | 通过倍增演示整数溢出 |
+| `phonebook.c` | 结构体数组与姓名查找 |
+| `recursion(递归).c` | 用递归方式绘制三角形 |
+| `scores.c` | 变长数组与平均值计算函数 |
+| `string.c` | `fgets` 读入与逐字符输出 |
+| `uppercase.c` | 基于 ASCII 的小写转大写 |
+
+## LeetCode 文件说明
+
+| 文件 | 题目 | 思路 |
+|------|------|------|
+| `136.c` | 只出现一次的数字 | 利用异或性质，时间复杂度 $O(n)$，额外空间 $O(1)$ |
+| `704.c` | 二分查找 | 在有序数组上二分，时间复杂度 $O(log n)$ |
+
+## 编译与运行
+
+### Windows PowerShell（GCC）
+
+```powershell
+Set-Location .\CS50
+gcc -std=c11 -Wall -Wextra -o scores.exe scores.c
+.\scores.exe
+```
+
+### Linux/macOS
+
+```bash
+cd CS50
+gcc -std=c11 -Wall -Wextra -o scores scores.c
+./scores
+```
+
+### 特殊文件名说明
+
+`iteration(迭代).c` 与 `recursion(递归).c` 含有括号和中文字符，建议在命令中使用引号：
+
+```bash
+gcc -std=c11 -Wall -Wextra -o iteration "iteration(迭代).c"
+gcc -std=c11 -Wall -Wextra -o recursion "recursion(递归).c"
+```
+
+## 备注
+
+- `CS50/` 下大多数程序是可独立编译运行的小示例，通常从标准输入读取数据。
+- `LeetCode/` 下文件是在线评测风格的函数实现，本地运行时需要自行补充 `main` 测试代码。
+- `overflow.c` 使用了 `unistd.h`，更推荐在 GCC 环境（如 MinGW/WSL/Linux/macOS）下编译。
 
 ## 许可证
 
-本项目仅供学习交流使用，请查看 LICENSE 文件了解详细信息。
-
-## 学习建议
-
-1. 从基础入门部分开始，按照文件顺序依次学习
-2. 每个示例程序建议亲自编写并运行一遍
-3. 理解代码逻辑后尝试修改代码进行实践
-4. 可以结合LeetCode题目进行算法练习
+请查看 `LICENSE` 获取详细许可信息。
