@@ -7,7 +7,7 @@ int main(void)
     char *s=malloc(100);
     printf("s:");
     scanf("%99s",s);
-    char *t=malloc(strlen(s)+1);
+    char *t=malloc((strlen(s)+1)*sizeof(char));
     strcpy(t,s);
     /*char *t=s；是浅拷贝，char *t=malloc(strlen(s)+1);strcpy(t,s);是深拷贝。*/
 
