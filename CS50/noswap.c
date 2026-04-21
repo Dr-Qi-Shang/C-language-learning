@@ -11,9 +11,7 @@ int main(void)
 
 void swap(int a,int b)
 /*swap(x, y) 把 x 和 y 的值（1 和 2）复制给了局部变量 a 和 b。
-
 函数内部交换的是 a 和 b 这两个副本。
-
 函数结束时，a 和 b 被销毁，main 中的 x 和 y 纹丝不动。*/
 { 
     int tmp=a;
