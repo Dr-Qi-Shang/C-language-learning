@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 int main(void)
 {
@@ -12,9 +13,29 @@ int main(void)
     list[1] = 2;
     list[2] = 3;
 
-    for(int i = 0; i < 3; i++)
+    int *tmp = malloc(4 * sizeof(int));
+    if(tmp==NULL)
+    {
+        free(list);
+        return 1;
+    }
+    //Copy integers from old array into new array
+    for(int i=0;i<3;i++)
+    {
+        tmp[i]=list[i];
+    }
+
+    tmp[3] = 4;
+
+    free(list);
+    list = tmp;
+
+
+    for(int i = 0; i < 4; i++)
     {
         printf("%i\n", list[i]);
     }
+
     free(list);
+    return 0;
 }
