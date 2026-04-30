@@ -1,11 +1,11 @@
 # C Language Learning
 
-A personal C learning repository with small, focused programs inspired by CS50 exercises, plus several LeetCode function solutions.
+A personal C learning repository built around small, focused programs. The content is split into two parts: CS50-style fundamentals and LeetCode algorithm implementations.
 
 ## Repository Overview
 
 - `CS50/`: standalone programs for core syntax, control flow, strings, pointers, structs, file I/O, and recursion
-- `LeetCode/`: algorithm practice files (including multiple versions of the same problem)
+- `LeetCode/`: algorithm practice files and alternative solutions to the same problem
 - `README.md` / `README.en.md`: Chinese and English documentation
 
 ## Directory Layout
@@ -91,13 +91,13 @@ C-language-learning/
 
 ## LeetCode File Guide
 
-| File | Problem/Status | Idea |
-|------|----------------|------|
+| File | Problem | Main Idea |
+|------|---------|-----------|
 | `136.c` | Single Number | XOR accumulation, $O(n)$ time and $O(1)$ extra space |
-| `27.c` | Remove Element (currently empty) | Placeholder for a future two-pointer implementation |
-| `283(1).c` | Move Zeroes (Version 1) | Multi-pass swapping approach, straightforward but less efficient |
-| `283(2).c` | Move Zeroes (Version 2) | Two-pointer in-place swapping, $O(n)$ time |
-| `344.c` | Reverse String (currently empty) | Placeholder for a future two-pointer reversal |
+| `27.c` | Remove Element | Two-pointer in-place swapping to move values not equal to `val` forward |
+| `283(1).c` | Move Zeroes | Multi-pass swapping approach, intuitive but less efficient |
+| `283(2).c` | Move Zeroes | Two-pointer in-place swapping, keeping non-zero elements in front |
+| `344.c` | Reverse String | Two-pointer swap from both ends, done in place |
 | `704.c` | Binary Search | Binary search on a sorted array, $O(log n)$ time |
 
 ## Build and Run
@@ -136,6 +136,7 @@ Most files in `LeetCode/` are judge-style function implementations and do not in
 
 - `CS50/output/` currently contains sample build artifacts (`.exe`) and `phonebook.csv`.
 - `overflow.c` uses `unistd.h`; GCC-compatible environments (MinGW/WSL/Linux/macOS) are recommended.
+- Files in `LeetCode/` are usually judge-style function implementations, so local testing requires an extra `main` or test harness.
 
 ## License
 
